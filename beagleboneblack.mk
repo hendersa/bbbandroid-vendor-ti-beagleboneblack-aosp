@@ -35,8 +35,3 @@ PRODUCT_BRAND := Android
 PRODUCT_MODEL := BeagleBone Black
 PRODUCT_MANUFACTURER := Texas_Instruments_Inc
 
-# BBBAndroid - Additional external packages
-PRODUCT_PACKAGES += \
-	i2c-tools \
-	dropbear
-

@@ -16,10 +16,10 @@
 
 
 PRODUCT_COPY_FILES := \
-	device/ti/beagleboneblack/init.am335xevm.rc:root/init.am335xevm.rc \
+	device/ti/beagleboneblack/init.genericam33xx(flatteneddevicetr.rc:root/init.genericam33xx(flatteneddevicetr.rc \
 	device/ti/beagleboneblack/init.am335xevm.usb.rc:root/init.am335xevm.usb.rc \
 	device/ti/beagleboneblack/vold.fstab:system/etc/vold.fstab \
-	device/ti/beagleboneblack/fstab.am335xevm:root/fstab.am335xevm \
+	device/ti/beagleboneblack/fstab.genericam33xx(flatteneddevicetr:root/fstab.genericam33xx(flatteneddevicetr \
 	device/ti/beagleboneblack/ueventd.am335xevm.rc:root/ueventd.am335xevm.rc \
 	device/ti/beagleboneblack/media_codecs.xml:system/etc/media_codecs.xml \
 	device/ti/beagleboneblack/media_profiles.xml:system/etc/media_profiles.xml \
@@ -93,5 +93,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	camera.omap3
+
+# BBBAndroid - Additional external packages
+PRODUCT_PACKAGES += \
+        i2c-tools \
+        dropbear
 
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)

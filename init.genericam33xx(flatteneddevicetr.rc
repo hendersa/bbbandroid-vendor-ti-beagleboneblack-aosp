@@ -53,7 +53,7 @@ on boot
     chmod 0666 /sys/class/backlight/tps65217-bl/brightness
 
 on fs
-    mount_all /fstab.am335xevm
+    mount_all /fstab.genericam33xx(flatteneddevicetr
 
     # This board does not have battery, force battery-level to 100%
     setprop hw.nobattery true
@@ -62,10 +62,9 @@ on fs
     chmod 0666 /dev/video0
     chown root root /dev/video0
 
-# BBBAndroid - Disable SGX
-#service pvr /system/bin/sgx/rc.pvr start
-#    class core
-#    oneshot
+service pvr /system/bin/sgx/rc.pvr start
+    class core
+    oneshot
 
 service dhcpcd_eth0 /system/bin/dhcpcd -ABKL -f/system/etc/dhcpcd/dhcpcd.conf
     class main

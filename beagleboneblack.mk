@@ -21,14 +21,6 @@
 # lines, full and toro, hence its name.
 #
 
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-        LiveWallpapers \
-        LiveWallpapersPicker \
-        MagicSmokeWallpapers \
-        VisualizationWallpapers \
-        librs_jni
-
 PRODUCT_PROPERTY_OVERRIDES := \
         net.dns1=8.8.8.8 \
         net.dns2=8.8.4.4
@@ -40,5 +32,11 @@ $(call inherit-product, device/ti/beagleboneblack/device.mk)
 PRODUCT_NAME := beagleboneblack
 PRODUCT_DEVICE := beagleboneblack
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := BEAGLEBONEBLACK
+PRODUCT_MODEL := BeagleBone Black
 PRODUCT_MANUFACTURER := Texas_Instruments_Inc
+
+# BBBAndroid - Additional external packages
+PRODUCT_PACKAGES += \
+	i2c-tools \
+	dropbear
+

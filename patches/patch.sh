@@ -7,4 +7,5 @@
 # From Chris Simmonds (csimmonds@2net.co.uk)  
 cd system/core
 patch -p1 < ../../device/ti/beagleboneblack/patches/0001-Fix-CallStack-API.patch
+cd ../..
 

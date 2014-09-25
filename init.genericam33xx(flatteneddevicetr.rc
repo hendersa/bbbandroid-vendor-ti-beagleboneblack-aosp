@@ -1,4 +1,4 @@
-import init.am335xevm.usb.rc
+import init.genericam33xx(flatteneddevicetr.usb.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug

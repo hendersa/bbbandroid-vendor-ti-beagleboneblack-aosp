@@ -17,10 +17,10 @@
 
 PRODUCT_COPY_FILES := \
 	device/ti/beagleboneblack/init.genericam33xx(flatteneddevicetr.rc:root/init.genericam33xx(flatteneddevicetr.rc \
-	device/ti/beagleboneblack/init.am335xevm.usb.rc:root/init.am335xevm.usb.rc \
+	device/ti/beagleboneblack/init.genericam33xx(flatteneddevicetr.usb.rc:root/init.genericam33xx(flatteneddevicetr.usb.rc \
 	device/ti/beagleboneblack/vold.fstab:system/etc/vold.fstab \
 	device/ti/beagleboneblack/fstab.genericam33xx(flatteneddevicetr:root/fstab.genericam33xx(flatteneddevicetr \
-	device/ti/beagleboneblack/ueventd.am335xevm.rc:root/ueventd.am335xevm.rc \
+	device/ti/beagleboneblack/ueventd.genericam33xx(flatteneddevicetr.rc:root/ueventd.genericam33xx(flatteneddevicetr.rc \
 	device/ti/beagleboneblack/media_codecs.xml:system/etc/media_codecs.xml \
 	device/ti/beagleboneblack/media_profiles.xml:system/etc/media_profiles.xml \
 	device/ti/beagleboneblack/mixer_paths.xml:system/etc/mixer_paths.xml \
@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
 
 # BBBAndroid - Since the users keep asking for GPIO key mappings for the
 # various LCDs (which enumerate in a variety of values), I'm just going
-# to copy the base one a bunch of times and hope for the best.
+# to copy links to the base one a bunch of times and hope for the best.
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gpio_keys_10.kl:system/usr/keylayout/gpio_keys_10.kl \
     $(LOCAL_PATH)/gpio_keys_11.kl:system/usr/keylayout/gpio_keys_11.kl \

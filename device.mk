@@ -16,11 +16,11 @@
 
 
 PRODUCT_COPY_FILES := \
-	device/ti/beagleboneblack/init.genericam33xx\(flatteneddevicetr.rc:root/init.genericam33xx\(flatteneddevicetr.rc \
-	device/ti/beagleboneblack/init.genericam33xx\(flatteneddevicetr.usb.rc:root/init.genericam33xx\(flatteneddevicetr.usb.rc \
+	device/ti/beagleboneblack/init.genericam33xx_flatteneddevicetr.rc:root/init.genericam33xx\(flatteneddevicetr.rc \
+	device/ti/beagleboneblack/init.genericam33xx_flatteneddevicetr.usb.rc:root/init.genericam33xx\(flatteneddevicetr.usb.rc \
 	device/ti/beagleboneblack/vold.fstab:system/etc/vold.fstab \
-	device/ti/beagleboneblack/fstab.genericam33xx\(flatteneddevicetr:root/fstab.genericam33xx\(flatteneddevicetr \
-	device/ti/beagleboneblack/ueventd.genericam33xx\(flatteneddevicetr.rc:root/ueventd.genericam33xx\(flatteneddevicetr.rc \
+	device/ti/beagleboneblack/fstab.genericam33xx_flatteneddevicetr:root/fstab.genericam33xx\(flatteneddevicetr \
+	device/ti/beagleboneblack/ueventd.genericam33xx_flatteneddevicetr.rc:root/ueventd.genericam33xx\(flatteneddevicetr.rc \
 	device/ti/beagleboneblack/media_codecs.xml:system/etc/media_codecs.xml \
 	device/ti/beagleboneblack/media_profiles.xml:system/etc/media_profiles.xml \
 	device/ti/beagleboneblack/mixer_paths.xml:system/etc/mixer_paths.xml \

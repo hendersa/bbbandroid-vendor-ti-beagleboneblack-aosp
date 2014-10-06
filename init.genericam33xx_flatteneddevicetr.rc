@@ -40,6 +40,26 @@ on post-fs-data
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
 
+    # BBBAndroid: Device tree overlay loading area
+    # Step 1. Copy your .dtbo files into /system/vendor/firmware
+    # Step 2. Write the name of the overlay (not the filename)
+    #         into the bone_capemgr file.
+    #         Ex: write /sys/devices/bone_capemgr.9/slots MY-CAPE
+
+    # BBBAndroid: Unlock each GPIO pin bank for mmap() access
+    write /sys/class/gpio/export 5
+    write /sys/class/gpio/export 65
+    write /sys/class/gpio/export 105
+
+    # BBBAndroid: Unlock SPI busses for apps
+    chmod 777 /dev/spidev1.0
+    chmod 777 /dev/spidev1.1
+
+    # BBBAndroid: Unlock I2C busses for apps and i2c-tools
+    chmod 777 /dev/i2c-0
+    chmod 777 /dev/i2c-1
+    chmod 777 /dev/i2c-2
+
 on boot
 # Boost cpu speed to 1GHz
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_setspeed 1000000

@@ -37,6 +37,9 @@ on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
     chown media_rw media_rw /data/media
 
+    # BBBAndroid: Remount the rootfs as rw for ADB push of files to /
+    mount rootfs rootfs / rw remount
+
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
 
